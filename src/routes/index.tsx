@@ -2,10 +2,9 @@ import { Route, Routes as Switch, BrowserRouter, useLocation } from "react-route
 import { Grid, Paper, useTheme } from "@mui/material";
 
 // import components 
-import Login2 from "../screens/Authentication/Login/Login";
 import Dashboard from "../screens/Authenticated/Dashboard";
-import Login from "../screens/Authentication/Login2.tsx";
-
+import Login from "../screens/Authentication/Login";
+import Add from "../screens/Authenticated/Add/Add";
 
 import { Authenticated } from "../utils/redux/reducer/authentication-slice";
 import { FC } from "react";
@@ -14,7 +13,6 @@ import AuthenticatedLayout from "./AuthenticatedLayout";
 import { Navigate } from "react-router-dom";
 import MyRoot from "./MyRoot";
 
-import { User } from "../utils/redux/reducer/authentication-slice";
 import { routes } from "../utils/constants/routes";
 
 
@@ -42,7 +40,7 @@ const AuthenticatedScreens: FC<{ Component: FC }> = ({ Component }) => {
 const Routes = () => {
 
     const theme = useTheme();
-    
+
     return (
         <Grid item container flexDirection="column">
             <Grid className="pageWrapper" item sx={{ width: "100%" }}>
@@ -57,18 +55,20 @@ const Routes = () => {
                         <Route path="/" element={<Root />}></Route>
                         <Route path="/login" element={<Login />}></Route>
 
-                        <Route path="/login2" element={<Login2 />}></Route>
-
                         <Route
                             path="/dashboard"
                             element={<AuthenticatedScreens Component={Dashboard} />}
                         />
+                        
+                         <Route
+                            path="/add"
+                            element={<AuthenticatedScreens Component={Add} />}
+                        /> 
 
                         <Route
                             path="/myroot"
                             element={<AuthenticatedScreens Component={MyRoot} />}
                         />
-
 
                         {/* <Route path = "/myroot" element = {<MyRoot/>}></Route> */}
                     </Switch>

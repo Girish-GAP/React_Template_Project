@@ -35,7 +35,7 @@
 
 // added Form Component : 
 //  Added all components which form components needs
-
+// and use form modules
 
 // use npm update before adding packages // it will update the core pacakges...
 
@@ -51,3 +51,14 @@
 // npm install --save @types/react-select   : npm WARN deprecated @types/react-select@5.0.1:
 
 // "react-material-file-upload": "^0.0.4",      /** Deprectiated */
+
+
+
+/*  
+
+//  HOW TO USE FORM :
+
+
+*/
+
+

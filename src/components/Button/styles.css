@@ -1,0 +1,10 @@
+.defaultButton, .textButton {
+    text-transform: capitalize;
+    font-weight: 600;
+    min-height: 45px;
+    font-size: 1rem;
+}
+/* 
+.defaultButton:hover {
+    background-color: #68d2db;
+} */

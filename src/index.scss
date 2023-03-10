@@ -1,0 +1,16 @@
+@import "./assets/scss/core";
+
+.editor {
+  .ql-toolbar {
+    height: 45px;
+  }
+  .ql-container {
+    height: 350px;
+  }
+  height: 395px;
+}
+
+svg > g > g.google-visualization-tooltip { pointer-events: none }
+.charts svg rect{
+  width: 100% !important;
+}

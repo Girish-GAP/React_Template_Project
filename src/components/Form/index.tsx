@@ -49,6 +49,7 @@ export interface FormModel {
   handledeleteImage?: (id: number) => void
 }
 
+// key will be string and value will be string or number or boolean
 export interface FormDataModel {
   [key: string]: string | number | boolean;
 }

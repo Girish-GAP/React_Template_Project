@@ -58,7 +58,32 @@
 
 //  HOW TO USE FORM :
 
+1) Import RefObject, useRef from 'react'
+2) import Form, { FormDataModel } from "../../../components/Form";
+3) make a referance pointer 
+      // let addFormRef : RefObject<Form | null | undefined> = useRef();    // pass first type as Form module
+4) pass the require props also values and model is compulsory
 
+5) prop model have many fields so it will be better to pass the json of it
+    - make another files called formNameForm which returns the json of model with value, import it in our form and pass that json as prop.
+6) inside that model we are going to mention the fields types array eg. input, dropdown etc..
+7) the number field we are added in that json are going to render...
+
+8) after submit the form call event function which will call the Form getFormData method by using ref pointer
+    let { getFormData} = addFormRef.current as {
+        getFormData: () => { formData: FormDataModel; isFormValid: boolean };
+    };
+        
+    let {formData, isFormValid} = getFormData();
 */
 
 
+
+
+
+/*
+    //   let data = addFormRef.current
+    //   let data2 = data?.getFormData();
+    //   console.log(data2?.formData.username)
+
+*/

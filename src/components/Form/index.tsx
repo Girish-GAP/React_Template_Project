@@ -18,6 +18,7 @@ export interface FormValidators {
   num?: number;
 }
 
+// ? undefined : not need to pass as prop
 export interface FormModel {
   field: any;
   label: string;
@@ -48,10 +49,13 @@ export interface FormModel {
   handledeleteImage?: (id: number) => void
 }
 
+// key will be string and value will be string or number or boolean
 export interface FormDataModel {
   [key: string]: string | number | boolean;
 }
 
+
+// the undefined symbol (!) properties are not compulsory to pass
 interface FormProps {
   isFormUpdated?: boolean;
   values: any;
@@ -125,6 +129,8 @@ export default class Form extends Component<FormProps> {
     return isFormValid;
   };
 
+
+  //  current formData return 
   getFormData = () => {
     const { formData, isFormValid } = this.state;
     return { formData, isFormValid };

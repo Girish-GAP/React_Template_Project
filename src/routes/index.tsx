@@ -19,11 +19,10 @@ import { routes } from "../utils/constants/routes";
 
 const Root: FC = () => {
     const isLogin = useSelector(Authenticated);
-    let location = useLocation();
+    let location = useLocation();   // current url
     const { from } = location.state || { from: { pathname: "/dashboard" } };
     return isLogin ? <Navigate to={from} /> : <Navigate to={'/login'} />
 };
-
 
 
 // It's like a guard of angular
@@ -52,7 +51,7 @@ const Routes = () => {
                 >
                     {/* Brower router is defined in index.html file as Router */}
                     <Switch>
-                        <Route path="/" element={<Root />}></Route>
+                        <Route path="/" element={<Root />} />
                         <Route path="/login" element={<Login />}></Route>
 
                         <Route

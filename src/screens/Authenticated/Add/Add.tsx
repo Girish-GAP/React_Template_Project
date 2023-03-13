@@ -20,7 +20,8 @@ const Add = () => {
 
     return(
         <div>
-            ADD USER
+           
+           <h4>Add User</h4>
 
             <form onSubmit={handleSubmit}>
                 <label>ENTER NAME : </label>

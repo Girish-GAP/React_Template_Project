@@ -2,7 +2,7 @@ import { Route, Routes as Switch, BrowserRouter, useLocation } from "react-route
 import { Grid, Paper, useTheme } from "@mui/material";
 
 // import components 
-import Dashboard from "../screens/Authenticated/Dashboard";
+import Dashboard from "../screens/Authenticated/Dashboard/Dashboard";
 import Login from "../screens/Authentication/Login";
 import Add from "../screens/Authenticated/Add/Add";
 
